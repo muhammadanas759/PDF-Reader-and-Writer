@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="50.0" styleClass="firstFrame" stylesheets="@GeneralStyle.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FirstFrameController">
+ 
+    <children>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ScannerButtonClick" opacity="0.7" prefHeight="40.0" prefWidth="200.0" stylesheets="@GeneralStyle.css" text="PDF Scanner" textFill="NAVY">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#PDFReaderButtonClick" opacity="0.7" prefHeight="40.0" prefWidth="200.0" stylesheets="@GeneralStyle.css" text="PDF Reader" textFill="NAVY">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Line endX="300.0" opacity="0.7" startX="-100.0" stroke="#fffcfc" strokeLineCap="ROUND" strokeType="OUTSIDE" styleClass="line" />
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SortVisualizerButtonClick" opacity="0.7" prefHeight="40.0" prefWidth="200.0" stylesheets="@GeneralStyle.css" text="Sort Visualizer" textFill="NAVY">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>

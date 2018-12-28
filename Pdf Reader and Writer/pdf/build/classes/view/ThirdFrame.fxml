@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ScrollPane?>
+<!--
+add this import whenever its gives error regarding scrollpane after every
+change in UI.
+<?import javafx.scene.control.ScrollPane?>
+-->
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ThirdFrame">
+  <padding>
+		<Insets bottom="5" left="5" right="5" top="5" />
+	</padding>
+	<center>
+		<Pagination fx:id="pagination" prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+	</center>
+	<fx:define>
+		<ScrollPane fx:id="scroller" pannable="true" />
+	</fx:define>
+   <left>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="150.0" spacing="20.0" styleClass="firstFrame" stylesheets="@GeneralStyle.css" BorderPane.alignment="CENTER">
+         <children>
+   			<Button alignment="CENTER" contentDisplay="CENTER" onAction="#loadFile" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="Load File..." textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+   			<Button alignment="CENTER" contentDisplay="CENTER" onAction="#zoomFit" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="Zoom to fit" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+   			<Button alignment="CENTER" contentDisplay="CENTER" onAction="#zoomWidth" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="Zoom to width" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <HBox alignment="CENTER">
+               <children>
+         			<Label prefHeight="30.0" text="Zoom:" textFill="SNOW">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+         			<Button alignment="CENTER" contentDisplay="CENTER" onAction="#zoomOut" opacity="0.7" prefHeight="30.0" prefWidth="25.0" style="-fx-background-color: snow;" text="-" textFill="NAVY">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+         			<Label fx:id="currentZoomLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" textAlignment="CENTER" textFill="SNOW" />
+         			<Button alignment="CENTER" contentDisplay="CENTER" onAction="#zoomIn" opacity="0.7" prefHeight="30.0" prefWidth="25.0" style="-fx-background-color: snow;" text="+" textFill="NAVY">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Button alignment="CENTER" contentDisplay="CENTER" onAction="#BackButtonClick" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="Back" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

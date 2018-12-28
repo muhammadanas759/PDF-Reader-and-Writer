@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.firstFrame {
+ -fx-background-image:url('file:2.jpg');
+-fx-fill-height:true; 
+}
+.button
+{
+    
+   -fx-background-color: snow;
+    
+}

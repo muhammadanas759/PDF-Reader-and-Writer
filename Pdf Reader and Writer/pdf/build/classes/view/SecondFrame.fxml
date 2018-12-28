@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="border" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SecondFrameController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="153.0" spacing="15.0" styleClass="firstFrame" stylesheets="@GeneralStyle.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelId" alignment="CENTER" contentDisplay="CENTER" textFill="SNOW">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <font>
+                  <Font name="Gadugi Bold" size="17.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#AddButtonClick" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="Add" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#UploadImageButtonClick" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="Upload Image" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#formPolygon" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="Draw" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cropTheImage" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="crop" textFill="#000080">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="CreatePDFID" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#CreatePDFButtonClick" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="CreatePDF" textFill="#000080">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#discardButtonClick" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="Discard" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#BackButtonClick" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="Back" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="493.0" mnemonicParsing="false" onAction="#tessellateButtonClick" opacity="0.7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: snow;" text="Tessellate" textFill="NAVY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </left>
+   <center>
+      <Group fx:id="root1" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="589.0" fitWidth="641.0" pickOnBounds="true" preserveRatio="true" />
+            <Group fx:id="root">
+               <children>
+                  <Polygon fx:id="polygon" fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE" visible="false">
+                    
+                  </Polygon>
+               </children>
+            </Group>
+         </children>
+      </Group>
+   </center>
+</BorderPane>
